@@ -1,0 +1,24 @@
+/*html选择器*/
+body{
+	border: 1px solid red;/*这里我们给body指定了边框的宽度，样式，颜色(顺序可以随意)*/
+	width:800px;
+	height: 600px;
+	margin: 0 auto;/*上下边距为0，左右边界自动居中*/
+}
+
+/*类选择器*/
+.s1{
+	width:80px;
+	height: 80px;
+	border:1px solid blue;
+	margin-top: 10px;
+	margin-left: 10px;
+	/*padding-top: 5px; 不熟练不建议使用
+	padding-left: 5px;*/
+}
+
+.s1 img{
+	width: 60px;
+	margin-left: 5px;
+	margin-top: 5px;
+}

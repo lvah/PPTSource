@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>document示例--全选功能</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function selectCheck(obj){
+		var fruits=document.getElementsByName("fruit");
+		if(obj.innerText=="全选"){
+			for(i=0;i<fruits.length;i++){
+				fruits[i].checked=true;	
+			}
+		}else if(obj.innerText=="取消"){
+			for(i=0;i<fruits.length;i++){
+				fruits[i].checked=false;	
+			}
+		}
+	}
+	//响应复选框
+	function selectCheck2(){
+		var fruits=document.getElementsByName("fruit");
+		if(myselect.checked){
+			for(i=0;i<fruits.length;i++){
+				fruits[i].checked=true;	
+			}
+		}else{
+			for(i=0;i<fruits.length;i++){
+				fruits[i].checked=false;	
+			}
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+<input type="checkbox" name="fruit"/> 苹果<br>
+<input type="checkbox" name="fruit"/> 香蕉<br>
+<input type="checkbox" name="fruit"/> 西瓜<br>
+<input type="checkbox" name="fruit"/> 栗子<br>
+<input type="checkbox" name="fruit"/> 哈密瓜<br>
+<a href="#" onclick="selectCheck(this)">全选</a>
+<a href="#" onclick="selectCheck(this)">取消</a><br>
+<input type="checkbox" id="myselect" onclick="selectCheck2()"/> 是否全选
+</body>
+</html>

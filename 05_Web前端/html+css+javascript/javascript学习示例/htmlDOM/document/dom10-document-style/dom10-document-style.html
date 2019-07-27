@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>document示例--可拖动的DIV</title>
+<script language="javascript" type="text/javascript">
+<!--
+	var x=0,y=0,x1=0,y1=0;
+	var moveable=false;
+	var index=20000;
+	//开始拖动
+	function startDrag(obj,evt){
+		e=evt?evt:window.event;
+		
+		if(!window.captureEvents){
+			obj.setCapture();
+		}	else{
+			window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);
+		}
+		var win=obj.parentNode;//取得父窗体(父窗体就是该div得上一级div)
+		win.style.zIndex=++index;//设置父窗体的z轴值
+		x=e.clientX;//取得当前鼠标的X坐标
+		y=e.clientY;//取得当前鼠标的Y坐标
+		x1=parseInt(win.style.left);//将父窗体的距浏览器左边界的距离转换为NUMBER
+		y1=parseInt(win.style.top);//将父窗体的距浏览器上边界的距离转换为NUMBER
+		moveable=true;
+	}
+	function drag(obj,evt){
+		e=evt?evt:window.event;
+		if(moveable){
+			var win=obj.parentNode;
+			win.style.left=x1+e.clientX-x;
+			win.style.top=y1+e.clientY-y;
+		}
+	}
+	//停止拖动
+	function stopDrag(obj){
+		if(moveable){
+			if(!window.captureEvents){
+				obj.releaseCapture();
+			}else{
+				window.releaseEvents(Event.MOUSEMOVE|Event.MOUSEUP);
+			}
+			moveable=false;
+		}	
+	}
+//-->
+</script>
+</head>
+<body>
+	<div id="l1" style="position:absolute;width:200px;height:200px;background-color:#99CCFF;z-index:200;top:100px;left:154px;">
+		<div id="title" onMouseDown="startDrag(this,event)" onMouseMove="drag(this,event)" onMouseUp="stopDrag(this)"
+			style="width:200px;height:20px;background-color:#330033;top:0px;left:0px;z-index:200;position:absolute;font-size:9pt;color:#FFFFFF;
+			padding-top:5px;padding-left:5px;cursor:hand;">浮动窗口
+		</div>
+			实例
+	</div>
+</body>
+</html>

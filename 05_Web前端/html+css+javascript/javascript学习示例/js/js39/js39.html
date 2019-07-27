@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>js示例--乌龟抓鸡</title>
+<script language="javascript" type="text/javascript">
+<!--
+	//响应用户点击按钮，或者是按下键盘
+	function move(obj){
+		//得到乌龟图片的高度和宽度
+		var wugui_height=67;
+		var wugui_width=94;
+		//得到鸡图片的高度和宽度
+		var cock_height=73;
+		var cock_width=76;
+		//得到乌龟所在的div对象(这里就体现了dom特色)
+		var wugui=document.getElementById("wugui");
+		//window.event可以判断用户是通过点击鼠标还是通过键盘来控制乌龟
+		if(window.event){
+			//获得用户按下键的code值
+			key=obj.keyCode;
+		}
+
+		//得到该乌龟当前的top和left
+		var wugui_top=wugui.style.top;
+		var wugui_left=wugui.style.left;
+		//处理象素px后缀，进行数字运算
+		wugui_top=parseInt(wugui_top.substring(0,wugui_top.indexOf("p")));
+		wugui_left=parseInt(wugui_left.substring(0,wugui_left.indexOf("p")));
+		//判断用户点击哪个按
+		if(obj.value=="向下走"||key==40){
+			wugui.style.top=(wugui_top+10)+"px";
+			wugui_top=wugui_top+10;
+		}else if(obj.value=="向右走"||key==39){
+			wugui.style.left=(wugui_left+10)+"px";
+			wugui_left=wugui_left+10;
+		}else if(obj.value=="向左走"||key==37){
+			wugui.style.left=(wugui_left-10)+"px";
+			wugui_left=wugui_left-10;
+		}else if(obj.value=="向上走"||key==38){
+			wugui.style.top=(wugui_top-10)+"px";
+			wugui_top=wugui_top-10;
+		}
+		
+		//判断乌龟是否碰到鸡
+		//得到公鸡的left和top
+		var cock=document.getElementById("cock");
+		//得到该公鸡当前的top和left
+		var cock_top=cock.style.top;
+		var cock_left=cock.style.left;
+
+		cock_top=parseInt(cock_top.substring(0,cock_top.indexOf("p")));
+		cock_left=parseInt(cock_left.substring(0,cock_left.indexOf("p")));
+		y=Math.abs(cock_top-wugui_top);
+		x=Math.abs(cock_left-wugui_left);
+
+		//判断条件
+		xx=0;
+		yy=0;
+		//判断纵向
+		if(wugui_top<cock_top){
+			if(y<wugui_height){
+				yy=1;
+			}
+		}else{
+			if(y<cock_height){
+				yy=1;
+			}
+		}
+		//判断横向
+		if(wugui_left<cock_left){
+			if(x<wugui_width){
+				xx=1;
+			}
+		}else{
+			if(x<cock_width){
+				xx=1;
+			}
+		}
+
+		if(xx==1&&yy==1){
+			alert("乌龟好猛啊，顶!");
+			wugui.style.top=120+"px";
+			wugui.style.left=100+"px";
+		}
+	}
+//-->
+</script>
+</head>
+<body onkeydown="return move(event)">
+<table border="1px">
+<tr>
+<td></td>
+<td><input type="button" value="向上走" onclick="move(this)" /></td>
+<td></td>
+</tr>
+<tr>
+<td><input type="button" value="向左走" onclick="move(this)" /></td>
+<td></td>
+<td><input type="button" value="向右走" onclick="move(this)" /></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="button" value="向下走" onclick="move(this)" /></td>
+<td></td>
+</tr>
+</table>
+
+<!--把乌龟放在div中-->
+<div id="wugui" style="position:absolute;left:100px;top:120px;">
+<img src="1.jpg" border="1px" alt="" />
+</div>
+<!--鸡放在div中-->
+<div id="cock" style="position:absolute;left:200px;top:200px;">
+<img src="2.jpg" border="1px" alt="" />
+</div>
+
+</body>
+</html>

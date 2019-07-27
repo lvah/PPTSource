@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>document示例--课程选择</title>
+<select id="myCourse" onchange="getCourse();">
+	<option value="" selected>--请选择一门课程--</option>
+</select>
+<textarea id="myares" cols=30 rows=10></textarea>
+<script language="javascript" type="text/javascript">
+<!--
+	var last_select_num=3;//加入从数据库中查询，发现用户上次选择了3门课程
+	//动态添加第一门课程java
+	var myOpteion=document.createElement("OPTION");
+	myOpteion.value="java";
+	myOpteion.text="java";
+	myCourse.add(myOpteion);
+	//动态添加第一门课程oracle
+	var myOpteion=document.createElement("OPTION");
+	myOpteion.value="oracle";
+	myOpteion.text="oracle";
+	myCourse.add(myOpteion);
+	//动态添加第一门课程j2ee
+	var myOpteion=document.createElement("OPTION");
+	myOpteion.value="j2ee";
+	myOpteion.text="j2ee";
+	myCourse.add(myOpteion);
+	
+	function getCourse(){
+		//注意这两种方式的结果，有什么区别
+		myares.value+="你选中了:"+myCourse.value+"\r\n";
+	//	myares.value="你选中了:"+myCourse.options[myCourse.selectedIndex].innerText;
+	}
+//-->
+</script>
+</head>
+<body>
+
+</body>
+</html>

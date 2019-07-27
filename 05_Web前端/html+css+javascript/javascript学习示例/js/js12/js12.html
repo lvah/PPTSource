@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>js示例函数示例</title>
+<script language="javascript" type="text/javascript">//为了浏览器的兼容性必写
+<!--
+	var num1=window.prompt("请输入第一个num：");
+	var num2=window.prompt("请输入第二个num：");
+	var operator=window.prompt("请输入运算符：");
+	num1=parseFloat(num1);
+	num2=parseFloat(num2);
+	//如何调用函数
+	document.write("res="+jiSuan(num1,num2,operator));
+
+	//自定义函数
+	function jiSuan(num1,num2,operator){ //特别强调：参数名前不要带var
+		var res=0;
+		if(operator=="+"){
+			res=num1+num2;
+		}else if(operator=="-"){
+			res=num1-num2;
+		}else if(operator=="*"){
+			res=num1*num2;
+		}else if(operator=="/"){
+			res=num1/num2;
+		}else if(operator=="%"){
+			res=num1%num2;
+		}
+		return res;//返回值
+	}
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>

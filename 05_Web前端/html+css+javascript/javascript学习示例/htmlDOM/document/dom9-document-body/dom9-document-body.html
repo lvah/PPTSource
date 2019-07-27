@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>document示例 </title>
+<script language="javascript" type="text/javascript">
+<!--
+	//定两个方向
+	var directX=1;//X轴的方向
+	var directY=1;//Y轴的方向	
+	var sunX=0;//太阳的坐标
+	var sunY=0;
+	var speed=1;
+	function sunMove(){
+		sunX+=directX*speed;
+		sunY+=directY*speed;
+		var sundiv=document.getElementById("sundiv");
+		//修改div的left top
+		sundiv.style.top=sunY+"px";
+		sundiv.style.left=sunX+"px";
+
+		//判断什么时候转变方向
+		//判断X方向转向 (offsetWidth可以返回当前对象的实际宽度)
+		if(sunX+sundiv.offsetWidth>=document.body.clientWidth||sunX<=0){
+			directX=-directX;
+		}
+		//上面的if语句等价于下面的if
+	/*if(sunX+sundiv.offsetWidth>=document.body.clientWidth){
+			divectX=-1;
+		}else if(sunX<=0){
+			divectX=1;
+		}*/
+		
+		//判断Y方向转向
+		if(sunY+sundiv.offsetHeight>=document.body.clientHeight||sunY<=0){
+			directY=-directY;
+		}
+	}
+	setInterval("sunMove()",10);
+//-->
+</script>
+</head>
+<body style="background-image: url('./ship.jpg');background-repeat:no-repeat;">
+<div id="sundiv" style="position:absolute">
+	<img src="sun.gif" />
+</div>
+</body>
+</html>

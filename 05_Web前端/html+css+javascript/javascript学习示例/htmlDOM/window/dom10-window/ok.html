@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>登录等待窗口</title>
+<script language="javascript" type="text/javascript">
+<!--
+	//setTimeout("javascript:window.open("manage.html")",5000);
+	
+	function changeSec(){
+		$("time").innerText=$("time").innerText-1;
+		if($("time").innerText==0){
+			clearInterval(timer);
+			open("manage.html","_self");
+		}
+	}
+	var timer=setInterval("changeSec()",1000);
+
+	function $(id){
+		return document.getElementById(id);
+	}
+//-->
+</script>
+</head>
+<body>
+登录成功<br>
+<span id="time">5</span>秒后跳转至管理页面!<br>
+</body>
+</html>

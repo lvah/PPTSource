@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>domcument-table</title>
+	<script type="text/javascript" language="javascript">
+	<!--
+		//演示添加一行
+		function addHero(){
+			//遍历整个表格看看有没有重复的编号
+			for(var i=0;i<mytab.rows.length;i++){
+				var eachRow=mytab.rows[i];
+
+				if(eachRow.cells[0].innerText==pm.value){
+					alert("编号"+pm.value+"重复，请修改编号");
+					return;
+				}
+			}
+			var tableRow=mytab.insertRow(mytab.rows.length);
+			tableRow.insertCell(0).innerText=pm.value;
+			tableRow.insertCell(1).innerText=xm.value;
+			tableRow.insertCell(2).innerText=wh.value;
+		}
+	//-->
+	</script>
+  </head>
+  <body>
+	<h3>水浒英雄排行榜</h3>
+	<table id="mytab" border="1px">
+	<tr><td>排名</td><td>姓名</td><td>外号</td></tr>
+	<tr><td>1</td><td>宋江</td><td>及时雨</td></tr>
+	<tr><td>2</td><td>卢俊义</td><td>玉麒麟</td></tr>
+	</table>
+	<h3><font color="red">添加新英雄</font></h3>
+	排名<input id="pm" type="text" /><br>
+	姓名<input id="xm" type="text" /><br>
+	外号<input id="wh" type="text" /><br>
+	<input type="button" value="添加" onclick="addHero()"/><br>
+	</body>
+</html>

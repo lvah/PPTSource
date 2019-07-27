@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>js示例构造函数可传方法</title>
+
+<script language="javascript" type="text/javascript">
+<!--
+	function jiSuan(num1,num2,oper){
+		if(oper=="+"){
+			return num1+num2;
+		}else if(oper=="-"){
+			return num1-num2;
+		}else if(oper=="*"){
+			return num1*num2;
+		}else{
+			return num1/num2;
+		}
+	}
+
+	function Person(name,age,fun){
+		this.name=name;
+		this.age=age;
+		this.myfun=fun;
+	}
+	var p1=new Person("aa",9,jiSuan);
+	window.alert(p1.name);
+	window.alert(p1.myfun(89,90,"+"));
+
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+

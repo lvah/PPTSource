@@ -1,0 +1,22 @@
+body{
+	margin: 0px auto;
+	width: 1000px;
+	height: 1000px;
+	border: 1px solid pink;
+}
+
+.div1{
+	margin-top:10px;
+	margin-left:10px;
+	width:150px;
+	height:100px;
+	border: 1px solid blue;
+	background-color: pink;
+	float: left;
+}
+
+#special{
+	position: relative;/*这里我们使用了相对定位relative*/
+	left: 80px;/*在原来的位置向左移动大小*/
+	top: 120px;/*在原来的位置向下移动多少*/
+}

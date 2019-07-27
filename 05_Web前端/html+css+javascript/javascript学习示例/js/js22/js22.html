@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>js示例玛里奥综合示例</title>
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=">
+    <link rel="stylesheet" type="text/css" href="./js22css.css">
+<script language="javascript" type="text/javascript">
+<!--
+	//设计Mario类
+	function Mario(){
+		this.x=0;
+		this.y=0;
+		//移动0上1右2下3左
+		this.move=function(direct){
+			switch(direct){
+				case 0:
+					//这里为了改变img的left和top,我们需要得到img元素(对象)
+					var mymario=document.getElementById('mymario');
+					var top=mymario.style.top;
+					top=parseInt(top.substr(0,top.length-2));
+					mymario.style.top=(top-10)+"px";
+					if(top<0||top>400){
+						alert("mario越界了!")
+					}
+					break;
+				case 1:
+					var mymario=document.getElementById('mymario');
+					var left=mymario.style.left;
+					left=parseInt(left.substr(0,left.length-2));
+					mymario.style.left=(left+10)+"px";
+					if(left<0||left>500){
+						window.alert("mario越界了!")
+					}
+					break;
+				case 2:
+					var mymario=document.getElementById('mymario');
+					var top=mymario.style.top;
+					top=parseInt(top.substr(0,top.length-2));
+					mymario.style.top=(top+10)+"px";
+					if(top<0||top>400){
+						window.alert("mario越界了!")
+					}
+					break;
+				case 3:
+					var mymario=document.getElementById('mymario');
+					var left=mymario.style.left;
+					left=parseInt(left.substr(0,left.length-2));
+					mymario.style.left=(left-10)+"px";
+					if(left<0||left>500){
+						window.alert("mario越界了!")
+					}
+					break;
+			}
+		}
+	}
+	//创建Mario对象
+	var mario=new Mario();
+
+	//全局函数
+/*	function marioMove(direct){
+		switch(direct){
+			case 0:
+				mario.move(direct);
+				break;
+			case 1:
+				mario.move(direct);
+				break;
+			case 2:
+				mario.move(direct);
+				break;
+			case 3:
+				mario.move(direct);
+				break;
+		}
+	}*/
+//-->
+</script>
+</head>
+<body>
+<table border="1px" class="controlcenter">
+<tr><td colspan="3">游戏键盘</td></tr>
+<tr><td>**</td><td><input type="button" value="↑↑" onclick="mario.move(0)"/></td><td>**</td></tr>
+<tr><td><input type="button" value="←←" onclick="mario.move(3)"/></td><td>**</td><td><input type="button" value="→→" onclick="mario.move(1)"/></td></tr>
+<tr><td>**</td><td><input type="button" value="↓↓" onclick="mario.move(2)"/></td><td>**</td></tr>
+</table>
+
+<div class="gamediv">
+<img id='mymario' style="width:50px;left=100px;top=50px;position:absolute;"src="mario.jpg" />
+</div>
+
+</body>
+</html>
+
+
+

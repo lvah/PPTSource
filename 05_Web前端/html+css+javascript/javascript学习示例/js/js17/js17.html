@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>js示例二维数组矩形转置练习</title>
+<script language="javascript" type="text/javascript">
+<!--
+	var arr=[[2,4,6,8],[8,9,0,-1],[9,6,2,1]];
+	var arr_new=[];//定义一个新数组
+	document.writeln("转置前图形如下：<br>");
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<arr[i].length;j++){
+			document.writeln(arr[i][j]+"&nbsp;");
+			arr_new[j]=[0];//初始化arr_new数组
+		}
+		document.writeln("<br>");
+	}
+	document.writeln("<br>");
+	document.writeln("转置后图形如下：<br>");
+	//对arr数组中的值进行矩形交换到新数组arr_new中
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<arr[i].length;j++){
+			arr_new[j][i]=arr[i][j];
+		}
+	}
+	//遍历新数组arr_new输出结果
+	for(var i=0;i<arr_new.length;i++){
+		for(var j=0;j<arr_new[i].length;j++){
+			document.writeln(arr_new[i][j]+"&nbsp;");
+		}
+		document.writeln("<br>");
+	}
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>event示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test(event){
+		//用户每按下一个键，就去判断是不是一个数
+		if(event.keyCode<48||event.keyCode>57){
+			alert("Sorry，输入的不是数!");
+			return=false;
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+请输入一个六位数：<input id="txt" type="text" onkeypress="return test(event)"/><br>
+<input type="button" value="提交" onsubmit="test()" />
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>测试窗口</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function notify(){
+		opener.$("myspan").innerText=$("info").value;
+	}
+
+	function $(id){
+		return document.getElementById(id);
+	}
+//-->
+</script>
+</head>
+<body>
+此窗口为测试窗口<br>
+<span id="myspan2">子消息</span><br>
+<input id="info" type="text" value="" /><input type="button" value="通知给父窗口" onclick="notify();">
+</body>
+</html>

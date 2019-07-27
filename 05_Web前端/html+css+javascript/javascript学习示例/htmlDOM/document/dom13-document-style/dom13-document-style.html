@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>document示例--切换div</title>
+<link rel="stylesheet" type="text/css" href="./dom13css.css">
+<script language="javascript" type="text/javascript">
+<!--
+	function change(val,obj){
+	/*	if(val=="zs"){
+			zs.style.visibility="visible";
+			rz.style.visibility="hidden";
+			cg.style.visibility="hidden";
+		}else if(val=="rz"){
+			zs.style.visibility="hidden";
+			rz.style.visibility="visible";
+			cg.style.visibility="hidden";
+		}else if(val=="cg"){
+			zs.style.visibility="hidden";
+			rz.style.visibility="hidden";
+			cg.style.visibility="visible";
+		}*/
+		switch(val){
+			case "zs":
+					obj.style.backgroundColor="#FFC12D";
+					zs.style.display="block";
+					rz.style.display="none";
+					cg.style.display="none";
+					break;
+			case "rz":
+					obj.style.backgroundColor="#FFC12D";
+					zs.style.display="none";
+					rz.style.display="block";
+					cg.style.display="none";
+					break;
+			case "cg":
+					obj.style.backgroundColor="#FFC12D";
+					zs.style.display="none";
+					rz.style.display="none";
+					cg.style.display="block";
+					break;
+		}
+	}
+	function change2(obj){
+		obj.style.backgroundColor="silver";	
+	}
+//-->
+</script>
+</head>
+<body>
+<div class="div1">
+	<!--导航DIV-->
+	<div class="navi">
+		<ul>
+			<li id="zsli" onmouseover="change('zs',this)" onmouseout="change2(this)">招生</li>	
+			<li id="rzli" onmouseover="change('rz',this)" onmouseout="change2(this)">热招</li>	
+			<li id="cgli" onmouseover="change('cg',this)" onmouseout="change2(this)">出国</li>	
+		</ul>
+	</div>
+	<!--超链接DIV3个-->
+	<div id="zs" class="zs">
+		<ul>
+			<li><a href='#'>招生招生招生招生</a></li>
+			<li><a href='#'>招生招生招生招生</a></li>
+			<li><a href='#'>招生招生招生招生</a></li>
+			<li><a href='#'>招生招生招生招生</a></li>
+			<li><a href='#'>招生招生招生招生</a></li>
+			<li><a href='#'>招生招生招生招生</a></li>
+			<li><a href='#'>招生招生招生招生</a></li>
+			<li><a href='#'>招生招生招生招生</a></li>
+		</ul>
+	</div>
+		<div id="rz" class="rz" >
+		<ul>
+			<li><a href='#'>热招热招热招热招</a></li>
+			<li><a href='#'>热招热招热招热招</a></li>
+			<li><a href='#'>热招热招热招热招</a></li>
+			<li><a href='#'>热招热招热招热招</a></li>
+			<li><a href='#'>热招热招热招热招</a></li>
+			<li><a href='#'>热招热招热招热招</a></li>
+			<li><a href='#'>热招热招热招热招</a></li>
+			<li><a href='#'>热招热招热招热招</a></li>
+		</ul>
+	</div>
+		<div id="cg" class="cg">
+		<ul>
+			<li><a href='#'>出国出国出国出国</a></li>
+			<li><a href='#'>出国出国出国出国</a></li>
+			<li><a href='#'>出国出国出国出国</a></li>
+			<li><a href='#'>出国出国出国出国</a></li>
+			<li><a href='#'>出国出国出国出国</a></li>
+			<li><a href='#'>出国出国出国出国</a></li>
+			<li><a href='#'>出国出国出国出国</a></li>
+			<li><a href='#'>出国出国出国出国</a></li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

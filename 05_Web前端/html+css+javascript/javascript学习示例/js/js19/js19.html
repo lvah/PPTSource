@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>js示例二分查找</title>
+<script language="javascript" type="text/javascript">
+<!--
+	var arr=[32,52,76,82,104,372];
+	//测试
+	binarySearch(arr,52,0,arr.length-1);
+
+	function binarySearch(arr,findVal,leftIndex,rightIndex){
+		//防止无穷递归
+		if(leftIndex>rightIndex){
+			//提示找不到
+			document.writeln("找不到");
+			return;
+		}
+
+		//找到中间这个值
+		var midIndex=Math.floor((leftIndex+rightIndex)/2);
+		var midVal=arr[midIndex];
+		//比较
+		if(midVal>findVal){
+			//在左边找
+			binarySearch(arr,findVal,leftIndex,midIndex-1);
+		}else if(midVal<findVal){
+			//在右边找
+			binarySearch(arr,findVal,midIndex+1,rightIndex);
+		}else{
+			document.writeln("找到下标为："+midIndex);
+			return;
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+

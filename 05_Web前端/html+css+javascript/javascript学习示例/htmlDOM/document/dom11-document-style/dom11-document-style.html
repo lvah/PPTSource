@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>document示例--坦克转向</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function change(obj){
+		if(obj.value=="上"){
+			tank.style.backgroundPositionY="0px";
+		}else if(obj.value=="右"){
+			tank.style.backgroundPositionY="120px";
+		}else if(obj.value=="下"){
+			tank.style.backgroundPositionY="80px";
+		}else if(obj.value=="左"){
+			tank.style.backgroundPositionY="40px";	
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+<div id="tank" style="background-position-y:0px;background-image:url('./itank.jpg');width:40px;height:40px"></div><br>
+<input type="button" value="上" onclick="change(this)" />
+<input type="button" value="右" onclick="change(this)" />
+<input type="button" value="下" onclick="change(this)" />
+<input type="button" value="左" onclick="change(this)" />
+</body>
+</html>

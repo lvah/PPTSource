@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>RegExp</title>	
+<script type="text/javascript" language="javascript">
+<!--
+	//¾²Ì¬ÊôÐÔindex/leftContext/rightContext
+	function test(){
+		var con=content.innerText;
+		var myReg=/(\d){4}/gi;
+		while(res=myReg.exec(con)){
+			alert("index="+RegExp.index);//indexÊÇÈ¡¼ìË÷ÄÚÈÝÆ¥ÅäÎ»ÖÃµÄÖµ
+			alert("lefttext="+RegExp.leftContext);//leftContextÊÇÈ¡¼ìË÷ÄÚÈÝÆ¥ÅäÎ»ÖÃ×ó±ßµÄÄÚÈÝ
+			alert("righttext="+RegExp.rightContext);//rightContextÊÇÈ¡¼ìË÷ÄÚÈÝÆ¥ÅäÎ»ÖÃÓÒ±ßµÄÄÚÈÝ
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+	<textarea id="content" rows="10" cols="20"></textarea><br>
+	<input type="button" value="²âÊÔ" onclick="test()"/><br>
+</body>
+</html>

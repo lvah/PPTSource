@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RegExp--二代身份证验证.html</title>
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=">
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" language="javascript">
+	<!--
+		function idCard(){
+			area={11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",21:"辽宁",22:"吉林",23:"黑龙江",31:"上海",32:"江苏",33:"浙江",34:"安徽",35:"福建",36:"江西",37:"山东",41:"河南",42:"湖北",43:"湖南",44:"广东",45:"广西",46:"海南",50:"重庆",51:"四川",52:"贵州",53:"云南",54:"西藏",61:"陕西",62:"甘肃",63:"青海",64:"宁夏",65:"新疆",71:"台湾",81:"香港",82:"澳门",91:"国外"}
+			var idInfo=idNumber.value;
+			var idReg=/^[1-9]\d{5}[1-2](9|0)\d\d[0-1]\d[0-3]\d{4}(\d|x)$/;
+			//判断输入的ID长度和格式是否正确
+			if(!idReg.test(idInfo)||idInfo==""){
+				alert("不能为空或输入有误!请核实后重新输入!");
+			}else{
+			//通过地区码判断ID号是否非法
+			var myArea=idInfo.substring(0,2);//只判断了开始的2位地区码省份，有兴趣的朋友可以添加市及县的判断
+			if(area[parseInt(myArea)]==null){
+				alert("非法二代身份证!");
+			}
+				//取出性别
+				var mySex=idInfo.substring(16,17);
+				//取出生日
+				var myDate=idInfo.substring(6,14);
+				
+				alert("身份证号码："+idInfo+" 籍贯所在地："+area[parseInt(myArea)]+" 性别："+(mySex%2?"男":"女")+" 生日："+myDate);
+				
+			}
+		}
+	//-->
+	</script>
+  </head>
+  <body>
+    <input id="idNumber" type="text" />
+    <input type="button" value="二代身份证验证" onclick="idCard()"/>
+  </body>
+</html>

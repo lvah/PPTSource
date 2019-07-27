@@ -1,0 +1,27 @@
+body{
+	margin: 0px auto;
+	width: 1000px;
+	height: 1000px;
+	border: 1px solid pink;
+}
+
+.div1{
+	float: right;
+}
+
+.div2{
+	/*float: left;*/
+}
+
+.div3{
+	
+}
+
+.div1,.div2,.div3{
+	margin-top:10px;
+	margin-left:10px;
+	width:150px;
+	height:100px;
+	border: 1px solid blue;
+	background-color: pink;
+}

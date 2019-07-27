@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>js示例闭包closure演示</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function a(){
+		this.i=0;
+		function b(){
+			alert(++i);
+		}
+		return b;
+	}
+	//闭包是和GC垃圾回收机制相关的。
+	a();//此时a调用使用了函数中的i后，GC扫描i无任何函数指向时，就会回收释放空间。
+	var c=a();//而a调用后将b赋给c了，GC扫描知道c得到的返回值b中包含了i，此时GC会判断i虽然没有使用，但仍有变量指向，GC暂时不能回收并释放空间，并将i先保留。此称为闭包。
+	c();
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>

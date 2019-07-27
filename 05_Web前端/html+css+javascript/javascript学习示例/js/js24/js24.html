@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>js示例封装示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function Person(name,agei,sal){
+		this.name=name;//公开的属性
+		var age=agei;//私有属性
+		var salary=sal;//私有属性
+		//在类中如何定义公开的方法(特权方法)，私有方法(内部方法)
+		//如果我们希望操作私有的属性，则可以通过公开的方法去实现
+		this.show=function(){
+			window.alert(age+" "+salary);
+		}
+		//私有方法,可以访问类中的对象属性(不论公开的还是私有的)
+		function show(){
+			window.alert(age+" "+salary);
+		}
+	}
+	var p1=new Person('sp',20,50000);
+	window.alert(p1.name);
+	p1.show();
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+

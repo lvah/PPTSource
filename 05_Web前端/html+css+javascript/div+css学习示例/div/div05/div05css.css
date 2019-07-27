@@ -1,0 +1,57 @@
+/*html选择器*/
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+/*div1 用于控制显示的位置*/
+.div1{
+	width: 500px;
+	height: 300px;
+	border: 1px solid #b4b4b4;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+/*faceul用于控制显示图片区域的宽度和高度*/
+.faceul{
+	width: 350px;
+	height: 250px;
+	border: 1px solid red;
+	margin-left: 10px;
+	margin-top: 10px;
+	list-style-type: none;
+	padding: 0px;
+}
+
+/*这个用于控制单个图片区域的大小*/
+.faceul li{
+	width:50px;
+	height: 66px;
+	border:1px solid blue;
+	float:left;/*左浮动*/
+	margin-left: 15px;
+	margin-top: 8px;
+}
+
+.faceul a{
+	font-size: 12px;
+	margin-left:10px;
+}
+
+.faceul img{
+	width: 40px;
+	margin-left:5px;
+	margin-top:5px;
+}
+
+a:link{
+	text-decoration: none;
+	color: black;
+}
+
+a:HOVER {
+	text-decoration: underline;
+	color:blue;
+}
+

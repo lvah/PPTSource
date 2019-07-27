@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>document示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test1(){
+		//创建元素
+		var myElement=document.createElement("a");//createElement(??)??写希望创建的html元素的标签名
+		//给新元素添加必要的信息
+		myElement.id="id1";
+		myElement.href="http://www.sina.com.cn";
+		myElement.innerText="连接到sina";
+		//给新元素指定位置
+		myElement.style.left="400px";
+		myElement.style.top="300px";
+		myElement.style.position="absolute";
+
+		//添加到document.body上
+		document.body.appendChild(myElement);
+	}
+	
+	function test2(){
+			var myButton=document.createElement("input");
+			myButton.type="button";
+			myButton.value="这是动态建立的按钮";
+			document.getElementById("div1").appendChild(myButton);
+	}
+	
+	function test3(){
+		//删除一个元素(删除一个元素前提：必需获得父元素)
+		//这是第一种删除方法(不灵活)
+		document.body.removeChild(document.getElementById("id1"));
+		//第二种方法(推荐此方法)
+		//document.getElementById("id1").parentNode.removeChild(document.getElementById("id1"));
+	}
+	
+//-->
+</script>
+</head>
+<body>
+<input type="button" onclick="test1()" value="动态创建超链接" />
+<input type="button" onclick="test2()" value="动态创建按钮" />
+<input type="button" onclick="test3()" value="删除超链接" />
+<div id="div1" style="width:200px;height:400px;border:1px solid red;">div1</div>
+</body>
+</html>

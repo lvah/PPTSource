@@ -1,0 +1,18 @@
+/*合用html选择器*/
+a:LINK {
+	color: red;
+	font-size: 24px;
+	font-family: 华文新魏;
+	text-decoration: none;
+}
+
+a:HOVER {
+	color: green;
+	font-size: 40px;
+	font-family: 宋体;
+	text-decoration: underline;
+}
+
+a:VISITED {
+	color: gray;
+}

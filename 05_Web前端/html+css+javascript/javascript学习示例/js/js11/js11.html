@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>js示例图形示例</title>
+<script language="javascript">
+	var lay=window.prompt("输入图形高度：");
+	lay=parseInt(lay);
+	//直角三角形
+	for(var i=1;i<=lay;i++){
+		for(var j=1;j<=i;j++){
+			document.writeln("*");
+		}
+		document.writeln("<br>");
+	}
+	document.writeln("<br>");
+
+	//金字塔
+	for(var i=1;i<=lay;i++){
+		for(var j=1;j<=lay-i;j++){
+			document.writeln("&nbsp");
+		}
+		for(var k=1;k<=2*i-1;k++){
+			document.writeln("*");
+		}
+		document.writeln("<br>");
+	}
+	document.writeln("<br>");
+	
+	//空心金字塔
+	for(var i=1;i<=lay;i++){
+		for(var j=1;j<=lay-i;j++){
+			document.writeln("&nbsp");
+		}
+		for(var k=1;k<=2*i-1;k++){
+			if(i==lay){
+				document.writeln("*");
+			}else if(k==1||k==2*i-1){
+				document.writeln("*");
+			}else{
+				document.writeln("&nbsp");
+			}
+		}
+		document.writeln("<br>");
+	}
+	document.writeln("<br>");
+
+	//实心菱形
+	for(var i=1;i<=lay-1;i++){
+		for(var j=1;j<=lay-i;j++){
+			document.writeln("&nbsp");
+		}
+		for(var k=1;k<=(i-1)*2+1;k++){
+			document.writeln("*");
+		}
+		document.writeln("<br>");
+	}
+	for(var i=1;i<=lay;i++){
+		for(var j=1;j<=i-1;j++){
+			document.writeln("&nbsp");
+		}
+		for(var k=1;k<=(lay-i)*2+1;k++){
+			document.writeln("*");
+		}
+		document.writeln("<br>");
+	}
+	document.writeln("<br>");
+
+	//空心菱形
+	for(var i=1;i<=lay-1;i++){
+		for(var j=1;j<=lay-i;j++){
+			document.writeln("&nbsp");
+		}
+		for(var k=1;k<=(i-1)*2+1;k++){
+			if(k==1||k==(i-1)*2+1){
+				document.writeln("*");
+			}else{
+				document.writeln("&nbsp");
+			}
+		}
+		document.writeln("<br>");
+	}
+	for(var i=1;i<=lay;i++){
+		for(var j=1;j<=i-1;j++){
+			document.writeln("&nbsp");
+		}
+		for(var k=1;k<=(lay-i)*2+1;k++){
+			if(k==1||k==(lay-i)*2+1){
+				document.writeln("*");
+			}else{
+				document.writeln("&nbsp");
+			}
+		}
+		document.writeln("<br>");
+	}
+</script>
+</head>
+<body>
+</body>
+</html>

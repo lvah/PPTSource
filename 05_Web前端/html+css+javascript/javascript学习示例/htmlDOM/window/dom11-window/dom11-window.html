@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>dom--window对象</title>
+<script language="javascript" type="text/javascript">
+<!--
+	var space_num=0;
+	var dir=1;
+	function myScroll(){
+		var space_my="";
+		space_num=space_num+1*dir;
+		if(space_num>50||space_num<0){
+			dir=dir*-1;
+		}
+		for(var i=0;i<space_num;i++){
+			space_my=space_my+" ";
+		}
+		window.status=space_my+"世界你好!";
+	}
+	function startIt(){
+		setInterval("myScroll()",100);
+	}
+//-->
+</script>
+</head>
+<body onload="startIt()">
+</body>
+</html>
+

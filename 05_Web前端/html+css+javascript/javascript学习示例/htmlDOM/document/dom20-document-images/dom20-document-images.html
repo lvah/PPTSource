@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>domcument-images</title>
+
+	<script type="text/javascript" language="javascript">
+	<!--
+		function test1(){
+			myid.innerText="no ok";	
+		}
+		
+		function test2(){
+			myid.innerText="ok";
+		}
+	//-->
+	</script>
+  </head>
+  <body>
+	<!--文件名正确显示ok否则no ok-->
+	<img src="sun.gif" onerror="test1()" onload="test2()" />
+	<span id="myid"></span>
+  </body>
+</html>

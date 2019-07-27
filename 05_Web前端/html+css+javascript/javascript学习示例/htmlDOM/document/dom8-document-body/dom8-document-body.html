@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>document示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function window_onscroll(){
+			myHref.style.top=document.body.scrollTop+50;
+			myHref.style.left=document.body.scrollLeft;
+	}
+	
+	function document_onselectstart(){
+		alert("121");
+		return false;//返回false,可以禁止用户选网页中的文本；当用户选文本时会触发onselectstart事件，返回false就不会选中
+		//也可在body中加入onselectstart="return false"同样达到这个效果	
+	}
+//-->
+</script>
+<script language="javascript" for=document event=onselectstart>
+<!--
+	//这样等于与在body上写入onselectstart="return false"
+	return document_onselectstart();
+//-->
+</script>
+</head>
+<body onscroll="return window_onscroll()">
+	<TEXTAREA id="Textareal" name="Textareal" rows="500" cols="500">
+		asdfzxcvqwerzasdvzxcfawdsf
+	</TEXTAREA>
+<a id="myHref" href="http://www.sohu.com" style="left:0px;position:absolute;top:50px;word-break:keep-all">
+	<img src="sohu.jpg" />
+</a>
+
+</body>
+</html>

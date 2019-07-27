@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>RegExp</title>	
+<script type="text/javascript" language="javascript">
+<!--
+	function test(){
+		var con=content.innerText;
+		var myReg=/(\d)(\d)\2\1/gi;//()包起来为子表达式，\2反向引用第二个子表达式，\1反向引用第一个子表达式
+		while(res=myReg.exec(con)){
+			alert(res[0]);
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+	<textarea id="content" rows="10" cols="20"></textarea><br>
+	<input type="button" value="测试" onclick="test()"/><br>
+</body>
+</html>

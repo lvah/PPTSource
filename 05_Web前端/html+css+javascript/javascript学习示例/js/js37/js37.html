@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>js事件驱动机制单onfocus焦点</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test(){
+		alert("选中了输入框");
+	}
+	
+	function test1(){
+		alert("页面打开了");
+		//把鼠标定位到test输入框
+		document.getElementById('text1').onfocus();
+	}
+
+	function test2(){
+		alert("页面关闭了");
+	}
+	
+
+//-->
+</script>
+</head>
+<body onload="test1()" onunload="test2()" onbeforeunload="test2()">
+<input type="text" onfocus="test()" id="text1" />
+</body>
+</html>

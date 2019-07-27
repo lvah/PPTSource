@@ -1,0 +1,12 @@
+/*.style1就是类选择器*/
+.style1{
+	font-weight: bold;
+	font-size:20px;
+	background-color: pink;
+}
+
+/*#style2就是ID选择器*/
+#style2{
+	font-size: 30px;
+	background-color: silver;
+}

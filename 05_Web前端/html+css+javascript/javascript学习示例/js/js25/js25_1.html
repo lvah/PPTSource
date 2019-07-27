@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>js示例继承示例(冗余)</title>
+<script language="javascript" type="text/javascript">
+<!--
+function MidStu(name,age){
+	this.name=name;
+	this.age=age;
+	this.show=function(){
+		window.alert(this.name+" "+this.age);
+	}
+	//计算学费
+	this.payFee=function(money){
+		window.alert("应交"+parseFloat(money*0.8));
+	}
+}
+
+function Pupil(name,age){
+	this.name=name;
+	this.age=age;
+	this.show=function(){
+		window.alert(this.name+" "+this.age);
+	}
+	//计算学费
+	this.payFee=function(money){
+		window.alert("应交"+parseFloat(money*0.5));
+	}
+}
+
+var midStu=new MidStu("顺平",20);
+midStu.show();
+midStu.payFee(40);
+var pupil=new Pupil("sp",30);
+pupil.show();
+pupil.payFee(40);
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+

@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>RegExp</title>	
+<script type="text/javascript" language="javascript">
+<!--
+	function test(){
+		//得到用户的内容
+		var con=content.innerText;
+		var myReg=/(\d){4}/gi;//这是一个正则表达式对象，可以检索4个连续的数
+		while(res=myReg.exec(con)){//res是检索出来的结果，但是一个结果就对应一个数组，该数组的res[0]就是找到的那个文本
+			alert("找到"+res[0]);
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+	<textarea id="content" rows="10" cols="20"></textarea><br>
+	<input type="button" value="测试" onclick="test()"/>
+</body>
+</html>

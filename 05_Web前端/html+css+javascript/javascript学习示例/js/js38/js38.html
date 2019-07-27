@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>js事件驱动机制单oncontextmenu,onselectstart事件</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test(){
+		alert("版权所有，禁止拷贝");
+		return false;
+	}
+//-->
+</script>
+</head>
+<body oncontextmenu="return test()" onselectstart="return false">
+<p>
+测试内容，测试内容，测试内容，测试内容，测试内容<br>
+测试内容，测试内容，测试内容，测试内容，测试内容<br>
+测试内容，测试内容，测试内容，测试内容，测试内容<br>
+</p>
+<p>
+测试内容，测试内容，测试内容，测试内容，测试内容<br>
+测试内容，测试内容，测试内容，测试内容，测试内容<br>
+测试内容，测试内容，测试内容，测试内容，测试内容<br>
+</p>
+</body>
+</html>

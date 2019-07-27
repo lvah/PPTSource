@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>dom--window对象</title>
+<script language="javascript" type="text/javascript">
+<!--
+	var n=1;
+	var count=0;
+	//让静态图片动起来
+	function runChild(){
+		count++;
+		if(count>13){
+			//停止定时器
+			clearInterval(myTimer);
+		}
+		
+		//得到img对象
+		var myimg=document.getElementById("myimg");
+		myimg.src=(n++)+".jpg";
+		if(n>13){//因为有13张图片
+			n=1;
+		}
+	}
+	var myTimer=setInterval("runChild()",200);
+//-->
+</script>
+</head>
+<body>
+<img src="1.jpg" id="myimg" />
+</body>
+</html>
+

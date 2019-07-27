@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>dom--window对象</title>
+<script language="javascript" type="text/javascript">
+<!--
+	var n=1;
+	var count=0;
+	//让静态图片动起来
+	function runChild(){
+		count++;
+		if(count>13){
+			//停止定时器
+			clearInterval(myTimer);
+			alert("休息5秒!");
+			var myTimer2=setTimeout("reRun()",5000);
+			count=0;
+			n=1;
+		}
+		
+		//得到img对象
+		var myimg=document.getElementById("myimg");
+		myimg.src=(n++)+".jpg";
+		if(n>13){//因为有13张图片
+			n=1;
+		}
+	}
+	var myTimer=setInterval("runChild()",200);
+
+	function reRun(){
+		myTimer=setInterval("runChild()",200);
+	}
+
+	function stopMove(){
+		var stop=window.confirm("确定终止图片滚动？");
+		if(stop){
+			clearInterval(myTimer);
+			clearTimeout(myTimer2);
+		}
+	}
+
+//-->
+</script>
+</head>
+<body>
+<img src="1.jpg" id="myimg" /><br>
+<input type="button" value="终止图片滚动" onclick="stopMove()" />
+</body>
+</html>
+

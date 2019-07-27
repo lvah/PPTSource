@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>document示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test(){
+		//通过标签名来获取对象(元素)
+		var myObjs=document.getElementsByTagName("input");
+		for(var i=0;i<myObjs.length;i++){
+			alert(myObjs[i].value);	
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+请选择你的爱好
+<input type="checkbox" name="hobby" value="足球" />足球
+<input type="checkbox" name="hobby" value="旅游" />旅游
+<input type="checkbox" name="hobby" value="音乐" />音乐
+<input type="button" value="提交" onclick="test()" />
+</body>
+</html>

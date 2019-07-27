@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>RegExp</title>	
+<script type="text/javascript" language="javascript">
+<!--
+	function test(){
+		var con=content.innerText;
+		var myReg=/(\d)(\d)\2\2\1/gi;
+		while(res=myReg.exec(con)){
+			alert(res[0]);
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+	<textarea id="content" rows="10" cols="20"></textarea><br>
+	<input type="button" value="²âÊÔ" onclick="test()"/><br>
+</body>
+</html>

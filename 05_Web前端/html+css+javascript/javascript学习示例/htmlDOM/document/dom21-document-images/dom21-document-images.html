@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>domcument-images</title>
+	<script type="text/javascript" language="javascript">
+	<!--
+		function test1(){
+			myid.innerText="no ok";	
+		}
+		
+		function test2(){
+			myid.innerText="ok";
+		}
+		function abc(){
+			var myall=document.all;
+			for(var i=0;i<myall.length;i++){
+					alert(myall[i].nodeType+" "+myall[i].nodeName);
+			}
+		}
+	//-->
+	</script>
+  </head>
+  <body>
+	<!--文件名正确显示ok否则no ok-->
+	<img src="sun.gif" onerror="test1()" onload="test2()" />
+	<span id="myid"></span><br>
+	<input type="button" value="测试" onclick="abc()"/>
+  </body>
+</html>

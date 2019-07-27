@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>domcument-table</title>
+	<script type="text/javascript" language="javascript">
+	<!--
+		function test(){
+			//取出所有行
+/*		var myrows=mytab.rows;
+			alert(myrows.length);
+			alert(myrows[1].cells[0].innerText+" "+myrows[1].cells[1].innerText+" "+myrows[1].cells[2].innerText);
+*/
+			//mytab.rows表示所有行
+			for(var i=0;i<mytab.rows.length;i++){
+				//取出一行
+				var eachRow=mytab.rows[i];
+				//对该行遍历
+				//eachRow.cells表示一行的所有列
+				for(var j=0;j<eachRow.cells.length;j++){
+					alert(eachRow.cells[j].innerText);	
+				}
+			}
+		}
+	//-->
+	</script>
+  </head>
+  <body>
+	<h3>水浒英雄排行榜</h3>
+	<table id="mytab" border="1px">
+	<tr><td>排名</td><td>姓名</td><td>外号</td></tr>
+	<tr><td>1</td><td>宋江</td><td>及时雨</td></tr>
+	<tr><td>2</td><td>卢俊义</td><td>玉麒麟</td></tr>
+	</table>
+	<input type="button" onclick="test()" value="tesing" />
+  </body>
+</html>

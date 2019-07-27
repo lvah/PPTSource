@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>dom--window对象</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test(){
+		var res=window.confirm("你要删除吗？");
+		if(res){
+			window.alert("点击确定，返回true。删除!");
+		}else{
+			window.alert("点击取消，返回false。未删除!");
+		}
+	}
+
+//-->
+</script>
+</head>
+<body>
+<input type="button" value="删除记录" onclick="test()" />
+</body>
+</html>

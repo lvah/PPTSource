@@ -1,0 +1,63 @@
+/*主体html选择器*/
+body{
+	margin: 0 auto;
+	width: 1000px;
+	height:	1000px;
+	/*border: 1px solid red;*/
+	font-size: 12px;
+}
+
+.div1{
+	width: 350px;
+	height: 370px;
+	border:1px solid gray;
+}
+
+.span1{
+	/*background-color: pink;*/
+	display: block;
+}
+
+.span1 a{
+	float: right;/*右浮动*/
+	/*margin-left: 280px;*/
+	margin-top: 5px;
+}
+
+.faceul{
+	width:350px;
+	height:65px;
+	/*background-color:silver;*/
+	list-style-type: none;
+	padding:0px;
+}
+
+.faceul li{
+	float: left;
+	width: 107px;
+	height: 80px;
+	/*background-color: pink;*/
+	margin-left: 7px;
+	text-align: center;/*表示放在该元素的其它元素会左右居中放置*/
+}
+
+.faceul img{
+	margin-top: 2px;
+	margin-bottom:2px;
+	width: 55px;
+	height: 50px;
+}
+
+/*定义几个常用的字体样式*/
+.font1{
+	font-weight: hold;
+	font-size: 20px;
+	font-family: "华文新魏";
+	margin: 2px 0 0 2px;
+	text-align: center;
+}
+
+/*定义几种超链接的样式*/
+a:link{
+	text-decoration: none;
+}

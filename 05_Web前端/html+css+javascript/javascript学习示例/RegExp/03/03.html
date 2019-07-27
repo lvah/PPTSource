@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>RegExp</title>	
+<script type="text/javascript" language="javascript">
+<!--
+	//search()返回查找字符串出现的位置
+	var str="Visit W3School!";
+	alert(str.search(/W3School/));
+	
+	//match()返回检索指定的值
+	function test(){
+		var con=content.innerText;
+		var myreg=/abc/gi;
+		res=con.match(myreg);	
+		for(var i=0;i<res.length;i++){
+			alert(i+" "+res[0]);	
+		}
+	}
+	
+	//replace()查找替换
+	function test2(){
+		var con1=content.innerText;
+		var newcon=con1.replace(/sel.value/gi,rec.value);
+		content2.innerText=newcon;
+
+	}
+//-->
+</script>
+</head>
+<body>
+	<textarea id="content" rows="10" cols="20"></textarea><br>
+	<input type="button" value="测试" onclick="test()"/><br>
+	查找内容<input type="text" id="sel" /><br>
+	替换内容<input type="text" id="rec" /><br>
+	<input type="button" value="替换" onclick="test2()"/>
+	<textarea id="content2" rows="10" cols="20"></textarea><br>
+
+</body>
+</html>

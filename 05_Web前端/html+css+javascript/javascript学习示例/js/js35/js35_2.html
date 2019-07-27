@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>js事件驱动机制操作外部CSS案例</title>
+<link href="js35_2.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+<!--
+	function test(eventObj){
+		//获取js35_2.css中所有class选择器都获取
+		var ocssRules=document.styleSheets[0].rules;//IE浏览器下获取
+		//var ocssRules=document.styleSheets[0].cssRules;FF浏览器下获取
+		//从ocssRules取出你希望的class
+		var style1=ocssRules[0];
+		if(eventObj.value=="黑色"){
+			style1.style.backgroundColor="black";
+		}else if(eventObj.value=="红色"){
+			style1.style.backgroundColor="red";
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+<div id="div1" class="style1">div1</div>
+<input type="button" value="黑色" onclick="test(this)" />
+<input type="button" value="红色" onclick="test(this)" />
+</body>
+</html>

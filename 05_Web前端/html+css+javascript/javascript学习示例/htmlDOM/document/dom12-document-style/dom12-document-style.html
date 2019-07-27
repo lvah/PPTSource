@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>document示例--坦克转向</title>
+</head>
+<body onkeydown="dosomething(event)">
+<div id="filed" style="width:500px;height:400px; background-color:black;position:absolute;">
+<div id="mytank" style="background-position-y:0px;background-image:url('./itank.jpg');width:40px;height:40px;position:absolute;"></div><br>
+</div>
+
+<script language="javascript" type="text/javascript">
+<!--
+	//用面向对象的方法开发web版本坦克大战1.0版(可以通过asdw键来控制坦克的走向)
+	function MyTank(x,y,direct){
+			this.x=x;//坦克的横坐标
+			this.y=y;//坦克的纵坐标
+			this.direct=direct;//方向
+			this.speed=1;//速度
+			//初始化
+			mytank.style.left=this.x+"px";
+			mytank.style.top=this.y+"px";
+			mytank.style.backgroundPositionY="0px";
+			
+			//event表示按键事件
+			this.move=function move(event){
+				//a表示向左 3、s表示向下 2、d表示向右 1、w表示向上 0
+				switch(event.keyCode){
+					case 65://向左
+									this.x-=this.speed;
+									this.direct=3;
+									mytank.style.backgroundPositionY="40px";
+									break;
+					case 83://向下 
+									this.y+=this.speed;
+									this.direct=2;
+									mytank.style.backgroundPositionY="80px";
+									break;
+					case 68://向右 
+									this.x+=this.speed;
+									this.direct=1;
+									mytank.style.backgroundPositionY="120px";
+									break;
+					case 87://向上 
+									this.y-=this.speed;
+									this.direct=0;
+									mytank.style.backgroundPositionY="0px";
+									break;
+				}
+				//统一改变位置
+				mytank.style.left=this.x+"px";
+				mytank.style.top=this.y+"px";
+			}
+	}
+	
+	//判断用户的操作
+	function dosomething(event){
+		if(event.keyCode==65||event.keyCode==83||event.keyCode==68||event.keyCode==87){
+			hero.move(event);
+		}
+	}
+	
+	//创建坦克
+	var hero=new MyTank(150,360,0);
+	
+//-->
+</script>
+</body>
+</html>

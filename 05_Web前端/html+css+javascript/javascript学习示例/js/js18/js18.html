@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>jsй╬юЩеепРц╟ещеепР╥╗</title>
+<script language="javascript" type="text/javascript">
+<!--
+	var arr=[79,56,90,4,32,27,16,88,35];
+	var temp=0;
+	var flag=false;
+	for(var i=0;i<arr.length-1;i++){
+		for(var j=0;j<arr.length-1-i;j++){
+			if(arr[j]<arr[j+1]){
+				temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+				flag=true;
+			}
+		}
+		if(flag){
+			falg=false;
+		}else{
+			break;
+		}
+	}
+	document.writeln(arr);
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+

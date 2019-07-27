@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>js事件驱动机制操作示例III</title>
+<link href="js35_2.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+<!--
+	function test(eventObj){
+		//获取div1
+		var div1=document.getElementById('div1');
+		if(eventObj.value=="黑色"){
+			div1.style.backgroundColor="black";
+		}else if(eventObj.value=="红色"){
+			div1.style.backgroundColor="red";
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+<!--如何通过修改style来改变style-->
+<div id="div1" class="style1">div1</div>
+<input type="button" value="黑色" onclick="test(this)" />
+<input type="button" value="红色" onclick="test(this)" />
+</body>
+</html>

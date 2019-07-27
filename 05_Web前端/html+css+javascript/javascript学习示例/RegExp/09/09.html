@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>RegExp--验证邮件格式</title>	
+<script type="text/javascript" language="javascript">
+<!--
+	function test(){
+		var con=content.value;
+		alert(con);
+		var myReg=/^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+([a-zA-Z]){2,3}$/;
+		if(myReg.test(con)){
+			alert("格式正确!");
+		}else{
+			alert("格式错误!");	
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+	<input id="content" type="text" />
+	<input type="button" value="验证邮件格式" onclick="test()"/><br>
+	</form>
+
+</body>
+</html>

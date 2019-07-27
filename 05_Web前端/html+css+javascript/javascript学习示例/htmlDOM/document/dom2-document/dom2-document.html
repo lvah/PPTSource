@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>document示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test(){
+		//id不能唯一，但是name可以重复
+		var hobbies=document.getElementsByName("hobby");
+		//alert(hobbies.length);
+		for(var i=0;i<hobbies.length;i++){
+			//如果判断是否选择
+			if(hobbies[i].checked){
+				alert("你的爱好是："+hobbies[i].value)	;
+			}
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+请选择你的爱好
+<input type="checkbox" name="hobby" value="足球" />足球
+<input type="checkbox" name="hobby" value="旅游" />旅游
+<input type="checkbox" name="hobby" value="音乐" />音乐
+<input type="button" value="提交" onclick="test()" />
+</body>
+</html>

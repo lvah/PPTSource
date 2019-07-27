@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>js示例内部类Date类示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	var date=new Date();
+	function showHello(date){
+		//得到当前小时数
+		var hour=date.getHours();
+		//得到分钟
+		var minute=date.getMinutes();
+		//转成秒数
+		var mysecond=hour*3600+minute*60;
+		
+		if(mysecond>6*3600&&mysecond<(9*3600+1*60)){
+			alert("早上好");
+		}else if(mysecond>=(9*3600+1*60)&&mysecond<(11*3600+31*60)){
+			alert("上午好");
+		}else if(mysecond>=(11*3600+31*60)&&mysecond<(14*3600+31*60)){
+			alert("中午好");
+		}else if(mysecond>=(14*3600+31*60)&&mysecond<(17*3600+31*60)){
+			alert("下午好");
+		}else if(mysecond>=(17*3600+31*60)&&mysecond<(18*3600+41*60)){
+			alert("傍晚好");
+		}else if((mysecond>=(18*3600+41*60)&&mysecond<(23*3600+60*60-1))||mysecond<60){
+			alert("晚上好");
+		}else if(mysecond>=(0*3600+1*60)&&mysecond<(6*3600+60*60)){
+			alert("凌晨好");
+		}
+	}
+	showHello(date);
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>

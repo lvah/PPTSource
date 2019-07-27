@@ -1,0 +1,24 @@
+.s1{
+	font-size: 50px;
+	color: blue;
+}
+
+.s2{
+	font-style: italic;
+	color:red;
+}
+
+.s3{
+
+}
+
+.s4{
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.s3,.s2,.s4{
+	font-weight: bold;
+	background-color: gray;
+}
+

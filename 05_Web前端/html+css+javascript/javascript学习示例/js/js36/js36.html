@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>js事件驱动机制单事件多监听</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test1(e){
+		alert("test1事件");
+	}
+	
+	function test2(e){
+		alert("test2事件");
+	}	
+//-->
+</script>
+</head>
+<body>
+<input type="button" value="点击" onclick="test1(this),test2(this)" />
+</body>
+</html>

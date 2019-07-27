@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>dom--window对象</title>
+<script language="javascript" type="text/javascript">
+<!--
+	var newWindow;
+	function test(){
+		newWindow=window.open("test.html","_blank");
+	}
+
+	function test2(){
+		newWindow.$("myspan2").innerText=$("info2").value;
+	}
+
+	//将document.getElementById封装成函数
+	function $(id){
+		return document.getElementById(id);
+	}
+//-->
+</script>
+</head>
+<body>
+<input type="button" value="打开一个子窗口" onclick="test()" /><br>
+<span id="myspan">消息</span><br>
+<input type="text" id="info2" /><input type="button" value="向子窗口传信息" onclick="test2()" />
+</body>
+</html>
+

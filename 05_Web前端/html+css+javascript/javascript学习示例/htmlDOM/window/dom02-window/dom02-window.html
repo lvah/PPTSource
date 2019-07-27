@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>dom--window对象</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function sayHello(){
+		window.alert("hello!");
+	}
+	setInterval("sayHello()",5000);
+
+	function showTime(){
+		//在元素间的普通文本就是通过 [对象名.innerText]
+		document.getElementById("mytime").innerText=new Date().toLocaleString();
+	}
+	setInterval("showTime()",1000);
+//-->
+</script>
+</head>
+<body>
+<span id="mytime"></span>
+</body>
+</html>

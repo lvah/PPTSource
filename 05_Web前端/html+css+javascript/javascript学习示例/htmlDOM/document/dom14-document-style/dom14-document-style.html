@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>document示例--树状展开和关闭</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test1_onclick(){
+		if(test1.innerText=="-"){
+			myList.style.display="none";
+			test1.innerText="+";	
+		}else{
+			myList.style.display="block";
+			test1.innerText="-";
+			//怎样体现body的all这个对象的作用
+			//因为你可以通赤body的all来访问body中所有的控件(通过id)
+			//所以代码可以写成
+			//document.body.all.test1.innerText="-";
+			//document.body.all("text1").innerText="-";
+			//document.body.all.item("text1").innerText="-";
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+<p>
+<FONT face="宋体">
+<span id=test1 style="border-left-color:#ff0099;border-bottom-color:#ff0099;cursor:hand;border-top-style:ridge;border-right-color:#ff0099;border-bottom-style:ridge" language=javascript onclick="return test1_onclick()">-</span>
+myFamily
+</FONT>
+</p>
+<ul id=myList>
+	<li><font face="宋体">爸爸</font></li>
+	<li><font face="宋体">妈妈</font></li>
+	<li><font face="宋体">弟弟</font></li>
+</ul>
+</body>
+</html>

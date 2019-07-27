@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>event示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test(){
+		alert("投票成功!");
+		//解除事件绑定 detachEvent高版本IE无法使用
+		document.getElementById("but").detachEvent("onclick",test);
+	}
+//-->
+</script>
+</head>
+<body>
+<input id="but" type="button" value="投票" /><br>
+<script language="javascript" type="text/javascript">
+	//attachEvent高版本IE无法使用
+	document.getElementById("but").attachEvent("onclick",test);
+</script>
+</body>
+</html>

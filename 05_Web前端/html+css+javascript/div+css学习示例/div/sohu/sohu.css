@@ -1,0 +1,106 @@
+/*整个body体设置*/
+body{
+	margin: 0px auto;
+	width: 950px;
+	font-size: 12px;
+	font-family: "宋体";
+}
+
+/*页面头设置*/
+.top{
+	width:950px;
+	background-color: silver;
+}
+
+/*登录区域设置*/
+.login{
+	width: 416px;
+}
+
+/*设置首页*/
+.indexpage{
+	width: 105px;
+	margin-left: 80px;
+}
+.login,.indexpage{
+	float: left;
+}
+
+/*超链接*/
+.myherf{
+	width: 250px;
+	float: right;
+}
+
+.top.login,.indexpage,.myherf{
+	height: 22px;
+}
+
+/*logo*/
+.logo,.logo img{
+	width: 137px;
+}
+
+.logo img{
+	height: 68px;
+}
+
+/*导航栏*/
+.navi{
+	width: 807px;
+	margin-left: 6px;
+}
+
+.logo,.navi{
+	margin-top: 5px;
+	float: left;
+	height: 68px;
+}
+
+/*广告*/
+.ad{
+	width: 950px;
+	height: 212px;
+	margin-top: 5px;
+	border: 1px solid silver;
+}
+
+/*招生广告*/
+.stuad{
+	width: 126px;
+	float: left;
+	margin: 5px 0 0 5px;
+}
+
+/*广告2*/
+.ad2{
+	width: 453px;
+}
+
+/*房地产广告*/
+.housead{
+	width: 150px;
+}
+
+/*图片广告*/
+.picad{
+	width: 180px;
+	height: 212px;
+	float: right;
+	border-left: 1px solid silver;
+	text-align: center;
+}
+
+.ad,.stuad,.ad2,.housead{
+	float: left;
+}
+
+.stuad,.ad2,.housead{
+	height: 196px;
+	margin: 5px 0 0 10px;
+}
+
+/*公共属性*/
+.logo,.navi,.stuad,.ad2,.housead{
+	background-color: #7cf574;
+}

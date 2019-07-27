@@ -1,0 +1,32 @@
+body{
+	margin: 0px auto;
+	width: 1000px;
+	height: 1000px;
+	border: 1px solid pink;
+}
+
+.div1{
+	margin-top:10px;
+	margin-left:10px;
+	width:150px;
+	height:100px;
+	border: 1px solid blue;
+	background-color: pink;
+	float: left;
+}
+
+.div2{
+	position: relative;
+	left:200px;
+	top:100px;
+	width: 300px;
+	height: 100px;
+	float: left;
+	background-color: green;
+}
+
+#special{
+	position: absolute;/*这里我们使用了绝对定位absolute*/
+	left: 80px;/*在原来的位置向左移动大小*/
+	top: 120px;/*在原来的位置向下移动多少*/
+}

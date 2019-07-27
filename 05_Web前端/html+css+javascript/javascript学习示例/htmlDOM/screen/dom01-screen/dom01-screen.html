@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>screen使用示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test(){
+		var w=screen.width;
+		var h=screen.height;
+		var aw=screen.availWidth;
+		var ah=screen.availHeight;
+		document.getElementById("myspan").innerText="当前分辨率为："+w+"*"+h+"--||--"+"当前可用区域"+aw+"*"+ah;
+		if(w==1024&&h==768){
+			alert("当前分辨率为1024*768");
+		}else{
+			alert("当前分辨率为："+w+"*"+h);
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+<span id="myspan"></span>
+<br>
+<input type="button" value="获取当前屏幕分辨率" onclick="test()" /><br>
+</body>
+</html>

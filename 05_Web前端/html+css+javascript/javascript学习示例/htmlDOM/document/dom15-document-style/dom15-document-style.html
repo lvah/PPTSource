@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>document示例--购物车简易功能</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function gouwu(obj){
+		var fruits=document.getElementsByName("fruit");
+		var totalPrice=0;
+		//遍历所有的checkbox，计算新的总价
+		for(var i=0;i<fruits.length;i++){
+			//判断是否选中
+			if(fruits[i].checked){
+				totalPrice+=parseFloat(fruits[i].value);
+			}
+		}
+		myspan.innerText=totalPrice;
+	}
+//-->
+</script>
+</head>
+<body>
+<h1>我的购物车</h1>
+<input type="checkbox" name="fruit" onclick="gouwu(this)" value="10"/> 苹果 10元<br>
+<input type="checkbox" name="fruit" onclick="gouwu(this)" value="20"/> 香蕉 20元<br>
+<input type="checkbox" name="fruit" onclick="gouwu(this)" value="30"/> 西瓜 30元<br>
+<input type="checkbox" name="fruit" onclick="gouwu(this)" value="40"/> 栗子 40元<br>
+<input type="checkbox" name="fruit" onclick="gouwu(this)" value="50"/> 哈密瓜 50元<br>
+总价格是：<span id="myspan">0</span>元
+</body>
+</html>

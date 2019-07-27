@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>document示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test(){
+		var myhref=document.getElementById("a1");//相同id标签只找第一个
+		alert(myhref.innerText);
+	}
+//-->
+</script>
+</head>
+<body>
+<a id="a1" href="http://www.sohu.com">连接到sohu</a><br>
+<a id="a1" href="http://www.sina.com.cn">连接到sina</a><br>
+<a id="a1" href="http://www.163.com">连接到163</a><br>
+<input type="button" value="tesing" onclick="test()" />
+</body>
+</html>

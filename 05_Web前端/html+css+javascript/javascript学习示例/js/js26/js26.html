@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>js示例多态演示</title>
+<script language="javascript" type="text/javascript">
+<!--
+	//主人类
+	function Master(){
+		//给动物喂食
+		this.feed=function(animal,food){
+			window.alert(animal.constructor);
+			document.writeln("主人给"+animal.name+" 喂"+food.name+"<br>");
+		}
+	}
+	//食物类
+	function Food(name){
+		this.name=name;
+	}
+	//鱼类继承食物类
+	function Fish(name){
+		this.food=Food;
+		this.food(name);
+	}
+	//骨头类继承食物类
+	function Bone(name){
+		this.food=Food;
+		this.food(name);
+	}
+	//桃子类继承食物类
+	function Peach(name){
+		this.food=Food;
+		this.food(name);
+	}
+	//动物类
+	function Animal(name){
+		this.name=name;
+	}
+	//狗类继承动物类
+	function Dog(name){
+		this.animal=Animal;
+		this.animal(name);
+	}
+	//猫类继承动物类
+	function Cat(name){
+		this.animal=Animal;
+		this.animal(name);
+	}
+	//猴子类继承动物类
+	function Monkey(name){
+		this.animal=Animal;
+		this.animal(name);
+	}
+
+	var cat=new Cat("小猫咪");
+	var dog=new Dog("小狗");
+	var fish=new Fish("小鱼");
+	var bone=new Bone("骨头");
+	var monkey=new Monkey("小猴子");
+	var peach=new Peach("桃子");
+	var master=new Master();
+	master.feed(cat,fish);
+	master.feed(dog,bone);
+	master.feed(monkey,peach);
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>

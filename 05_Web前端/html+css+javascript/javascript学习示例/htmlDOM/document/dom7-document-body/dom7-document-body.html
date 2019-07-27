@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>document示例</title>
+<script language="javascript" type="text/javascript">
+<!--
+	function test1(){
+			//innerText作为文本解析
+			document.getElementById("myspan").innerText="<a href='http://www.sohu.com'>转到sohu</a><br>";
+	}
+	function test2(){
+			//innerHTML作为html解析
+			document.getElementById("myspan").innerHTML="<a href='http://www.sohu.com'>转到sohu</a><br>";
+	}
+//-->
+</script>
+</head>
+<body>
+	<span id="myspan"></span><br>
+	<input type="button" value="测试innerText" onclick="test1()" />
+	<input type="button" value="测试innerHTML" onclick="test2()" />
+</body>
+</html>

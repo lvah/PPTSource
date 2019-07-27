@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>dom18-doucment-forms.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<script type="text/javascript" language="javascript">
+	<!--
+		function test(){
+			//如何取得所有的表单
+			var allforms=document.forms;
+			
+			//可以通过allforms去访问指定表单
+			//alert(allforms[0].username.value);
+			alert(allforms.item(0).username.value);
+		}
+	//-->
+	</script>
+  </head>
+  
+  <body>
+  <h1>个人信息</h1>
+  <form action="">
+    U:<input type="text" name="username"/><br>
+    P:<input type="password" name="pwd" /><br>
+    <input type="submit" value="提交" />
+   </form>
+  <h1>兴趣爱好</h1>
+  <form action="">
+    爱好1:<input type="text" name="hobby1"/><br>
+    爱好2:<input type="text" name="hobby2" /><br>
+    <input type="submit" value="提交" />
+   </form>
+  <input type="button" value="tesing" onclick="test()" />
+  </body>
+</html>

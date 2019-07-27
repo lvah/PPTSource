@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>dom19-document-forms.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=">
+    
+    <link rel="stylesheet" type="text/css" href="./dom19css.css">
+	<script type="text/javascript" language="javascript">
+	<!--
+		function checkinfo(){
+			span1.innerText="";
+			span2.innerText="";
+			span3.innerText="";
+			//获取表单的用户名
+			if(document.forms[0].username.value.length<4||document.forms[0].username.value.length>6){
+				span1.innerText="*用户名长度为4-6之间";
+				return false;
+			}
+			//获取密码并判断
+			if(document.forms[0].pwd1.value.length<=3){
+				span2.innerText="*密码不能为空，不能少于3位";
+				return false;
+			}
+			if(document.forms[0].pwd1.value!=document.forms[0].pwd2.value){
+				span3.innerText="*两次密码要一样";
+				return false;
+			}
+		}
+	//-->
+	</script>
+  </head>
+  
+  <body>
+    <form action="">
+    <h1>用户注册</h1>
+    用&nbsp户&nbsp名：<input type="text" name="username" /><span id="span1"></span><br>
+    密&nbsp&nbsp&nbsp&nbsp码：<input type="password" name="pwd1" /><span id="span2"></span><br>
+    确认密码：<input type="password" name="pwd2" /><span id="span3"></span><br>
+    年&nbsp&nbsp&nbsp&nbsp龄：<input type="text" name="age" /><br>
+    电子邮件：<input type="text" name="email" /><br>
+    电话号码：<input type="text" name="phone" /><br>
+    <input type="submit" value="提交注册内容" onclick="return checkinfo()" />
+    <input type="reset" value="重置" />
+    </form>
+  </body>
+</html>
